@@ -1,0 +1,53 @@
+
+/*A modification of the Andy Bell reset - (link)*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh; /*vh = verticle height measurement. setting to 100 will set size to screen height.*/
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5; /*1.5 x 16(default line height)*/
+}
+
+body, 
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, dl, li,
+figure, figcaption, blockquote {
+	margin: 0;
+	padding: 0;
+}
+
+ul, ol {
+	list-style-type: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+input, /*--forms--*/
+button, 
+textarea, 
+select {
+	font: inherit; /*will have same font as the rest of the page*/
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important; /*!important will make this rule take precedent over others*/
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
